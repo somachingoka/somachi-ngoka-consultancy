@@ -24,6 +24,10 @@
 }
 
 html { scroll-behavior: smooth; }
+#contactModal { display: none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); width: min(580px, 92vw); background: #F7F4EF; border: 1px solid rgba(26,24,20,0.1); z-index: 10000; padding: 3rem; }
+#modalOverlay { display: none; position: fixed; inset: 0; background: rgba(26,24,20,0.5); z-index: 9999; }
+#contactModal.active { display: block; }
+#modalOverlay.active { display: block; }
 
 body {
   font-family: var(--sans);
@@ -747,7 +751,7 @@ footer {
     <li><a href="#about">About</a></li>
     <li><a href="#services">Services</a></li>
     <li><a href="#certifications">Credentials</a></li>
-    <li><a href="#" class="nav-cta open-modal">Let's talk</a></li>
+    <li><a href="#" class="nav-cta open-modal" onclick="document.getElementById('contactModal').classList.add('active');document.getElementById('modalOverlay').classList.add('active');document.body.style.overflow='hidden';return false;">Let's talk</a></li>
   </ul>
 </nav>
 
@@ -764,7 +768,7 @@ footer {
   <div class="hero-bottom">
     <p class="hero-desc">I help startups and growing businesses build the data infrastructure they need to succeed, ranging from dashboards, end to end pipelines and reporting systems.</p>
     <div class="hero-actions">
-      <a href="#contact" class="btn-primary open-modal">Start a conversation</a>
+      <a href="#" class="btn-primary open-modal" onclick="document.getElementById('contactModal').classList.add('active');document.getElementById('modalOverlay').classList.add('active');document.body.style.overflow='hidden';return false;">Start a conversation</a>
       <a href="#services" class="btn-secondary">Explore services</a>
     </div>
   </div>
@@ -919,7 +923,7 @@ footer {
     <h2>Ready to build <em>something great?</em></h2>
     <p class="contact-sub">Whether you have a project in mind or are not sure where to start, I would love to have a conversation.</p>
     <div class="contact-actions">
-      <a href="#" class="btn-primary open-modal">Get in touch</a>
+      <a href="#" class="btn-primary open-modal" onclick="document.getElementById('contactModal').classList.add('active');document.getElementById('modalOverlay').classList.add('active');document.body.style.overflow='hidden';return false;">Get in touch</a>
       <a href="mailto:somachingoka@gmail.com" class="contact-email-link">somachingoka@gmail.com</a>
     </div>
   </div>
@@ -932,9 +936,9 @@ footer {
 
 
 
-<div id="modalOverlay" style="position:fixed;inset:0;background:rgba(26,24,20,0.5);backdrop-filter:blur(6px);z-index:999;opacity:0;pointer-events:none;transition:opacity 0.3s ease;"></div>
+<div id="modalOverlay"></div>
 
-<div id="contactModal" style="position:fixed;top:50%;left:50%;transform:translate(-50%,-48%);width:min(580px,92vw);background:#F7F4EF;border:1px solid rgba(26,24,20,0.1);z-index:1000;padding:3rem;opacity:0;pointer-events:none;transition:opacity 0.3s ease,transform 0.3s ease;">
+<div id="contactModal" >
   <button id="modalClose" style="position:absolute;top:1.25rem;right:1.5rem;background:none;border:none;font-size:1.4rem;color:rgba(26,24,20,0.4);cursor:pointer;line-height:1;font-family:sans-serif;">&times;</button>
   <div style="margin-bottom:2rem;">
     <p style="font-size:0.68rem;letter-spacing:0.2em;text-transform:uppercase;color:#8B6914;margin-bottom:0.5rem;font-family:'Outfit',sans-serif;">Get in touch</p>
@@ -979,10 +983,7 @@ footer {
   </div>
 </div>
 
-<style>
-  #contactModal.active { opacity:1;pointer-events:all;transform:translate(-50%,-50%); }
-  #modalOverlay.active { opacity:1;pointer-events:all; }
-</style>
+
 
 <script>
 document.addEventListener("DOMContentLoaded", function() {
