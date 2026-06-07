@@ -986,118 +986,124 @@ footer {
 
 <script>
 document.addEventListener("DOMContentLoaded", function() {
+
   // Nav scroll
   const nav = document.getElementById('nav');
-  window.addEventListener('scroll', () => {
+  window.addEventListener('scroll', function() {
     nav.classList.toggle('scrolled', window.scrollY > 60);
   });
 
   // Scroll reveal
   const reveals = document.querySelectorAll('.reveal');
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(e => {
+  const revealObserver = new IntersectionObserver(function(entries) {
+    entries.forEach(function(e) {
       if (e.isIntersecting) {
         e.target.classList.add('visible');
-        observer.unobserve(e.target);
+        revealObserver.unobserve(e.target);
       }
     });
   }, { threshold: 0.08 });
-  reveals.forEach(el => observer.observe(el));
+  reveals.forEach(function(el) { revealObserver.observe(el); });
 
   // Custom cursor
-  const cursor = document.getElementById('cursor');
-  const ring = document.getElementById('cursorRing');
-  let ringX = 0, ringY = 0;
-  let mouseX = 0, mouseY = 0;
-
-  document.addEventListener('mousemove', e => {
-    mouseX = e.clientX;
-    mouseY = e.clientY;
-    cursor.style.left = mouseX - 4 + 'px';
-    cursor.style.top = mouseY - 4 + 'px';
-  });
-
-  function animateRing() {
-    ringX += (mouseX - ringX - 18) * 0.12;
-    ringY += (mouseY - ringY - 18) * 0.12;
-    ring.style.left = ringX + 'px';
-    ring.style.top = ringY + 'px';
-    requestAnimationFrame(animateRing);
+  const cursorDot = document.getElementById('cursor');
+  const cursorRing = document.getElementById('cursorRing');
+  if (cursorDot && cursorRing) {
+    let ringX = 0, ringY = 0, mouseX = 0, mouseY = 0;
+    document.addEventListener('mousemove', function(e) {
+      mouseX = e.clientX;
+      mouseY = e.clientY;
+      cursorDot.style.left = (mouseX - 4) + 'px';
+      cursorDot.style.top = (mouseY - 4) + 'px';
+    });
+    function animateRing() {
+      ringX += (mouseX - ringX - 18) * 0.12;
+      ringY += (mouseY - ringY - 18) * 0.12;
+      cursorRing.style.left = ringX + 'px';
+      cursorRing.style.top = ringY + 'px';
+      requestAnimationFrame(animateRing);
+    }
+    animateRing();
+    document.querySelectorAll('a, button, .tool-tag, .cert-card, .service-item').forEach(function(el) {
+      el.addEventListener('mouseenter', function() {
+        cursorDot.style.transform = 'scale(2)';
+        cursorRing.style.transform = 'scale(1.5)';
+        cursorRing.style.borderColor = 'rgba(139,105,20,0.6)';
+      });
+      el.addEventListener('mouseleave', function() {
+        cursorDot.style.transform = 'scale(1)';
+        cursorRing.style.transform = 'scale(1)';
+        cursorRing.style.borderColor = 'rgba(139,105,20,0.3)';
+      });
+    });
   }
-  animateRing();
-
-  document.querySelectorAll('a, button, .tool-tag, .cert-card, .service-item').forEach(el => {
-    el.addEventListener('mouseenter', () => {
-      cursor.style.transform = 'scale(2)';
-      ring.style.transform = 'scale(1.5)';
-      ring.style.borderColor = 'rgba(139,105,20,0.6)';
-    });
-    el.addEventListener('mouseleave', () => {
-      cursor.style.transform = 'scale(1)';
-      ring.style.transform = 'scale(1)';
-      ring.style.borderColor = 'rgba(139,105,20,0.3)';
-    });
-  });
 
   // Modal
   const modal = document.getElementById('contactModal');
-  const modalOverlay = document.getElementById('modalOverlay');
+  const overlay = document.getElementById('modalOverlay');
+  const closeBtn = document.getElementById('modalClose');
+  const contactForm = document.getElementById('contactForm');
+  const formSuccess = document.getElementById('formSuccess');
 
   function openModal() {
+    if (!modal || !overlay) return;
     modal.classList.add('active');
-    modalOverlay.classList.add('active');
+    overlay.classList.add('active');
     document.body.style.overflow = 'hidden';
   }
 
   function closeModal() {
+    if (!modal || !overlay) return;
     modal.classList.remove('active');
-    modalOverlay.classList.remove('active');
+    overlay.classList.remove('active');
     document.body.style.overflow = '';
-    document.getElementById('formSuccess').style.display = 'none';
-    document.getElementById('contactForm').style.display = 'flex';
+    if (formSuccess) formSuccess.style.display = 'none';
+    if (contactForm) contactForm.style.display = 'flex';
   }
 
-  document.querySelectorAll('.open-modal').forEach(btn => {
-    btn.addEventListener('click', (e) => {
+  window.closeModal = closeModal;
+
+  document.querySelectorAll('.open-modal').forEach(function(btn) {
+    btn.addEventListener('click', function(e) {
       e.preventDefault();
       openModal();
     });
   });
 
-  modalOverlay.addEventListener('click', closeModal);
-  document.getElementById('modalClose').addEventListener('click', closeModal);
+  if (overlay) overlay.addEventListener('click', closeModal);
+  if (closeBtn) closeBtn.addEventListener('click', closeModal);
 
-  document.addEventListener('keydown', e => {
+  document.addEventListener('keydown', function(e) {
     if (e.key === 'Escape') closeModal();
   });
 
-  document.getElementById('contactForm').addEventListener('submit', async (e) => {
-    e.preventDefault();
-    const form = e.target;
-    const btn = document.getElementById('submitBtn');
-    btn.textContent = 'Sending...';
-    btn.disabled = true;
-
-    try {
-      const res = await fetch('https://formspree.io/f/xaqzedqv', {
-        method: 'POST',
-        headers: { 'Accept': 'application/json' },
-        body: new FormData(form)
-      });
-
-      if (res.ok) {
-        form.style.display = 'none';
-        document.getElementById('formSuccess').style.display = 'flex';
-      } else {
-        btn.textContent = 'Something went wrong. Try again.';
-        btn.disabled = false;
+  if (contactForm) {
+    contactForm.addEventListener('submit', async function(e) {
+      e.preventDefault();
+      const submitBtn = document.getElementById('submitBtn');
+      submitBtn.textContent = 'Sending...';
+      submitBtn.disabled = true;
+      try {
+        const res = await fetch('https://formspree.io/f/xaqzedqv', {
+          method: 'POST',
+          headers: { 'Accept': 'application/json' },
+          body: new FormData(contactForm)
+        });
+        if (res.ok) {
+          contactForm.style.display = 'none';
+          formSuccess.style.display = 'flex';
+        } else {
+          submitBtn.textContent = 'Something went wrong. Try again.';
+          submitBtn.disabled = false;
+        }
+      } catch(err) {
+        submitBtn.textContent = 'Something went wrong. Try again.';
+        submitBtn.disabled = false;
       }
-    } catch {
-      btn.textContent = 'Something went wrong. Try again.';
-      btn.disabled = false;
-    }
-  });
-  }); // end DOMContentLoaded
+    });
+  }
+
+});
 </script>
 </body>
 </html>
