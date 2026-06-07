@@ -1,146 +1,1112 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <meta http-equiv="Content-Style-Type" content="text/css">
-  <title></title>
-  <meta name="Generator" content="Cocoa HTML Writer">
-  <meta name="CocoaVersion" content="2575.7">
-  <style type="text/css">
-    body {background-color: #f5f1eb}
-    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 13.2px 'Helvetica Neue'; color: #141310; -webkit-text-stroke: #141310}
-    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 16.0px 'Helvetica Neue'; color: #141310; -webkit-text-stroke: #141310; min-height: 18.0px}
-    p.p4 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px 'Helvetica Neue'; color: #141310; color: rgba(20, 19, 16, 0.5); -webkit-text-stroke: rgba(20, 19, 16, 0.5)}
-    p.p5 {margin: 0.0px 0.0px 0.0px 0.0px; font: 9.4px 'Helvetica Neue'; color: #f5f1eb; -webkit-text-stroke: #f5f1eb}
-    p.p6 {margin: 0.0px 0.0px 0.0px 0.0px; font: 10.8px 'Helvetica Neue'; color: #141310; color: rgba(20, 19, 16, 0.5); -webkit-text-stroke: rgba(20, 19, 16, 0.5)}
-    p.p7 {margin: 0.0px 0.0px 0.0px 0.0px; font: 16.0px 'Helvetica Neue'; color: #141310; -webkit-text-stroke: #141310; background-color: #775711; min-height: 18.0px}
-    p.p8 {margin: 0.0px 0.0px 0.0px 0.0px; font: 9.6px 'Helvetica Neue'; color: #775711; -webkit-text-stroke: #775711}
-    p.p10 {margin: 0.0px 0.0px 15.0px 0.0px; font: 12.6px 'Helvetica Neue'; color: #141310; color: rgba(20, 19, 16, 0.5); -webkit-text-stroke: rgba(20, 19, 16, 0.5)}
-    p.p11 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.6px 'Helvetica Neue'; color: #141310; color: rgba(20, 19, 16, 0.5); -webkit-text-stroke: rgba(20, 19, 16, 0.5)}
-    p.p12 {margin: 0.0px 0.0px 0.0px 0.0px; font: 18.0px 'Helvetica Neue'; color: #775711; -webkit-text-stroke: #775711}
-    p.p13 {margin: 0.0px 0.0px 0.0px 0.0px; font: 19.2px 'Helvetica Neue'; color: #141310; -webkit-text-stroke: #141310}
-    p.p14 {margin: 0.0px 0.0px 0.0px 0.0px; font: 11.8px 'Helvetica Neue'; color: #141310; color: rgba(20, 19, 16, 0.5); -webkit-text-stroke: rgba(20, 19, 16, 0.5)}
-    p.p16 {margin: 0.0px 0.0px 0.0px 0.0px; font: 7.4px 'Helvetica Neue'; color: #775711; -webkit-text-stroke: #775711}
-    p.p17 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px 'Helvetica Neue'; color: #141310; -webkit-text-stroke: #141310}
-    p.p18 {margin: 0.0px 0.0px 0.0px 0.0px; font: 8.6px 'Helvetica Neue'; color: #141310; color: rgba(20, 19, 16, 0.5); -webkit-text-stroke: rgba(20, 19, 16, 0.5)}
-    p.p19 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; font: 16.0px 'Helvetica Neue'; color: #141310; -webkit-text-stroke: #141310; min-height: 18.0px}
-    p.p20 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; font: 9.6px 'Helvetica Neue'; color: #775711; -webkit-text-stroke: #775711}
-    p.p22 {margin: 0.0px 224.3px 36.0px 224.3px; text-align: center; text-indent: -224.3px; font: 12.0px 'Helvetica Neue'; color: #141310; color: rgba(20, 19, 16, 0.5); -webkit-text-stroke: rgba(20, 19, 16, 0.5)}
-    p.p23 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; font: 9.4px 'Helvetica Neue'; color: #f5f1eb; -webkit-text-stroke: #f5f1eb}
-    p.p24 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; font: 13.2px 'Helvetica Neue'; color: #775711; -webkit-text-stroke: #775711}
-    p.p25 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; font: 11.4px 'Helvetica Neue'; color: #141310; color: rgba(20, 19, 16, 0.5); -webkit-text-stroke: rgba(20, 19, 16, 0.5)}
-    p.p26 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; font: 8.6px 'Helvetica Neue'; color: #141310; color: rgba(20, 19, 16, 0.5); -webkit-text-stroke: rgba(20, 19, 16, 0.5)}
-    span.s1 {font-kerning: none}
-    span.s2 {font-kerning: none; color: #775711; -webkit-text-stroke: 0px #775711}
-    span.s3 {font-kerning: none; background-color: #775711}
-    span.s4 {font: 16.0px 'Helvetica Neue'; font-kerning: none; color: #141310; -webkit-text-stroke: 0px #141310}
-    span.s5 {font-kerning: none; color: #141310; -webkit-text-stroke: 0px #141310}
-    span.s6 {font-kerning: none; background-color: #ece9e0}
-    span.s7 {font-kerning: none; color: #775711; background-color: #ece9e0; -webkit-text-stroke: 0px #775711}
-    span.s8 {font-kerning: none; color: #141310; background-color: #ece9e0; -webkit-text-stroke: 0px #141310}
-    span.s9 {font-kerning: none; background-color: #f5f1eb}
-    span.s10 {font-kerning: none; color: #775711; background-color: #f5f1eb; -webkit-text-stroke: 0px #775711}
-    span.s11 {font-kerning: none; color: #141310; background-color: #f5f1eb; -webkit-text-stroke: 0px #141310}
-    span.s12 {font: 13.2px 'Helvetica Neue'; font-kerning: none}
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Somachi Ngoka | Data Consultancy</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400;1,500&family=Outfit:wght@200;300;400;500&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --bg: #F7F4EF;
+  --bg2: #F0EDE6;
+  --bg3: #EAE6DE;
+  --surface: #E8E4DC;
+  --border: rgba(26,24,20,0.1);
+  --text: #1A1814;
+  --muted: rgba(26,24,20,0.5);
+  --accent: #8B6914;
+  --accent-dim: rgba(139,105,20,0.08);
+  --accent-mid: rgba(139,105,20,0.4);
+  --serif: 'Playfair Display', Georgia, serif;
+  --sans: 'Outfit', sans-serif;
+}
+
+html { scroll-behavior: smooth; }
+#contactModal { display: none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); width: min(580px, 92vw); background: #F7F4EF; border: 1px solid rgba(26,24,20,0.1); z-index: 10000; padding: 3rem; }
+#modalOverlay { display: none; position: fixed; inset: 0; background: rgba(26,24,20,0.5); z-index: 9999; }
+#contactModal.active { display: block; }
+#modalOverlay.active { display: block; }
+
+body {
+  font-family: var(--sans);
+  background: var(--bg);
+  color: var(--text);
+  font-size: 16px;
+  line-height: 1.7;
+  font-weight: 300;
+  overflow-x: hidden;
+  cursor: none;
+}
+
+/* CUSTOM CURSOR */
+.cursor {
+  width: 8px; height: 8px;
+  background: var(--accent);
+  border-radius: 50%;
+  position: fixed;
+  pointer-events: none;
+  z-index: 9999;
+  transition: transform 0.15s ease;
+  mix-blend-mode: normal;
+}
+
+.cursor-ring {
+  width: 36px; height: 36px;
+  border: 1px solid rgba(139,105,20,0.3);
+  border-radius: 50%;
+  position: fixed;
+  pointer-events: none;
+  z-index: 9998;
+  transition: all 0.12s ease;
+}
+
+body:hover .cursor { opacity: 1; }
+
+/* NAV */
+nav {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 100;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 4rem;
+  transition: all 0.4s ease;
+}
+
+nav.scrolled {
+  background: rgba(247,244,239,0.95);
+  backdrop-filter: blur(20px);
+  padding: 1rem 4rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.nav-logo {
+  font-family: var(--serif);
+  font-size: 1.1rem;
+  font-style: italic;
+  color: var(--text);
+  text-decoration: none;
+  letter-spacing: 0.02em;
+}
+
+.nav-links { display: flex; gap: 2.5rem; list-style: none; align-items: center; }
+
+.nav-links a {
+  font-size: 0.72rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--muted);
+  text-decoration: none;
+  transition: color 0.2s;
+  font-weight: 400;
+}
+
+.nav-links a:hover { color: var(--accent); }
+
+.nav-cta {
+  padding: 0.5rem 1.25rem;
+  border: 1px solid rgba(139,105,20,0.3);
+  color: var(--accent) !important;
+  transition: all 0.25s !important;
+}
+
+.nav-cta:hover {
+  background: var(--accent) !important;
+  color: var(--bg) !important;
+  border-color: var(--accent) !important;
+}
+
+/* HERO */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 4rem 5rem;
+  padding-top: 5rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-noise {
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E");
+  pointer-events: none;
+  z-index: 0;
+}
+
+.hero-grid {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(26,24,20,0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(26,24,20,0.04) 1px, transparent 1px);
+  background-size: 60px 60px;
+  pointer-events: none;
+  mask-image: radial-gradient(ellipse at 50% 0%, black 0%, transparent 70%);
+}
+
+.hero-glow {
+  position: absolute;
+  width: 600px; height: 600px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(139,105,20,0.06) 0%, transparent 70%);
+  top: -100px; right: -100px;
+  pointer-events: none;
+  animation: glowPulse 6s ease-in-out infinite;
+}
+
+.hero-glow-2 {
+  position: absolute;
+  width: 400px; height: 400px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(139,105,20,0.04) 0%, transparent 70%);
+  bottom: 0; left: 10%;
+  pointer-events: none;
+  animation: glowPulse 8s ease-in-out infinite reverse;
+}
+
+@keyframes glowPulse {
+  0%, 100% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.1); opacity: 0.7; }
+}
+
+.hero-eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  position: relative;
+  z-index: 1;
+  opacity: 0;
+  animation: fadeUp 1s 0.2s ease both;
+}
+
+.eyebrow-line {
+  width: 40px; height: 1px;
+  background: var(--accent);
+}
+
+.eyebrow-text {
+  font-size: 0.7rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--accent);
+  font-weight: 400;
+}
+
+.hero-available {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-left: auto;
+  font-size: 0.7rem;
+  letter-spacing: 0.1em;
+  color: var(--muted);
+}
+
+.available-dot {
+  width: 6px; height: 6px;
+  border-radius: 50%;
+  background: #4CAF50;
+  animation: blink 2s ease infinite;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.3; }
+}
+
+h1 {
+  font-family: var(--serif);
+  font-size: clamp(4rem, 9vw, 8rem);
+  font-weight: 400;
+  line-height: 0.95;
+  letter-spacing: -0.02em;
+  max-width: 12ch;
+  margin-bottom: 2rem;
+  position: relative;
+  z-index: 1;
+  opacity: 0;
+  animation: fadeUp 1s 0.35s ease both;
+}
+
+h1 .italic { font-style: italic; color: var(--accent); }
+
+.hero-bottom {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2rem;
+  position: relative;
+  z-index: 1;
+  opacity: 0;
+  animation: fadeUp 1s 0.5s ease both;
+}
+
+.hero-desc {
+  font-size: 1rem;
+  color: var(--muted);
+  max-width: 40ch;
+  line-height: 1.8;
+  font-weight: 300;
+}
+
+.hero-actions {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1rem;
+}
+
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1rem 2rem;
+  background: var(--accent);
+  color: var(--bg);
+  font-family: var(--sans);
+  font-size: 0.78rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  cursor: none;
+}
+
+.btn-primary:hover {
+  background: var(--text);
+  transform: translateY(-2px);
+}
+
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1rem 2rem;
+  background: transparent;
+  color: var(--text);
+  font-family: var(--sans);
+  font-size: 0.78rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: 400;
+  border: 1px solid var(--border);
+  transition: all 0.3s ease;
+  cursor: none;
+}
+
+.btn-secondary:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.hero-scroll-hint {
+  font-size: 0.68rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--muted);
+  writing-mode: vertical-rl;
+  position: absolute;
+  right: 4rem;
+  bottom: 5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  opacity: 0;
+  animation: fadeUp 1s 0.8s ease both;
+}
+
+/* MARQUEE */
+.marquee-section {
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  padding: 1.2rem 0;
+  overflow: hidden;
+  background: var(--bg2);
+}
+
+.marquee-track {
+  display: flex;
+  gap: 0;
+  animation: marquee 30s linear infinite;
+  width: max-content;
+}
+
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+.marquee-item {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  padding: 0 2rem;
+  white-space: nowrap;
+}
+
+.marquee-text {
+  font-family: var(--serif);
+  font-size: 0.9rem;
+  font-style: italic;
+  color: var(--muted);
+  letter-spacing: 0.02em;
+}
+
+.marquee-dot {
+  width: 4px; height: 4px;
+  border-radius: 50%;
+  background: var(--accent);
+  flex-shrink: 0;
+}
+
+/* SECTIONS */
+section { padding: 8rem 4rem; }
+
+.section-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 2.5rem;
+  gap: 4rem;
+}
+
+.section-num {
+  font-family: var(--serif);
+  font-size: 0.8rem;
+  font-style: italic;
+  color: var(--accent);
+  opacity: 0.6;
+  margin-bottom: 0.5rem;
+}
+
+h2 {
+  font-family: var(--serif);
+  font-size: clamp(2.5rem, 4.5vw, 4rem);
+  font-weight: 400;
+  line-height: 1.1;
+  letter-spacing: -0.01em;
+}
+
+h2 em { font-style: italic; color: var(--accent); }
+
+.section-intro {
+  font-size: 0.95rem;
+  color: var(--muted);
+  max-width: 36ch;
+  line-height: 1.85;
+  padding-top: 1rem;
+  align-self: flex-end;
+}
+
+/* ABOUT */
+.about { background: var(--bg2); border-top: 1px solid var(--border); }
+
+.about-grid {
+  display: block;
+}
+
+.about-text p {
+  font-size: 1.05rem;
+  color: var(--muted);
+  line-height: 1.9;
+  max-width: 100%;
+  margin-bottom: 1.25rem;
+}
+
+.about-text p strong { color: var(--text); font-weight: 400; }
+
+.about-text p:last-child { margin-bottom: 0; }
+
+.about-stats {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1px;
+  background: var(--border);
+  border: 1px solid var(--border);
+  margin-top: 3rem;
+}
+
+.stat-box {
+  background: var(--bg2);
+  padding: 1.75rem;
+  transition: background 0.3s;
+}
+
+.stat-box:hover { background: var(--surface); }
+
+.stat-num {
+  font-family: var(--serif);
+  font-size: 2.8rem;
+  font-weight: 400;
+  color: var(--accent);
+  line-height: 1;
+  margin-bottom: 0.35rem;
+}
+
+.stat-label {
+  font-size: 0.75rem;
+  color: var(--muted);
+  letter-spacing: 0.05em;
+  line-height: 1.5;
+}
+
+.tools-wrap { margin-top: 3rem; }
+
+.tools-label {
+  font-size: 0.68rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 1rem;
+  opacity: 0.7;
+}
+
+.tools-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.tool-tag {
+  font-size: 0.72rem;
+  padding: 0.35rem 0.85rem;
+  border: 1px solid var(--border);
+  color: var(--muted);
+  letter-spacing: 0.06em;
+  transition: all 0.2s;
+  cursor: none;
+}
+
+.tool-tag:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+  background: var(--accent-dim);
+}
+
+/* SERVICES */
+.services { background: var(--bg); border-top: 1px solid var(--border); }
+
+.services-list { display: flex; flex-direction: column; gap: 0; }
+
+.service-item {
+  display: grid;
+  grid-template-columns: 30px 1fr auto;
+  align-items: start;
+  gap: 3rem;
+  padding: 2.5rem 0;
+  border-bottom: 1px solid var(--border);
+  transition: all 0.3s ease;
+  cursor: none;
+}
+
+.service-item:first-child { border-top: 1px solid var(--border); }
+
+.service-item:hover { padding-left: 1rem; }
+.service-item:hover .service-bullet { font-size: 1.5rem; color: var(--accent); padding-top: 0.2rem; line-height: 1; }
+
+.service-num { color: var(--accent); }
+
+.service-bullet { font-size: 1.5rem; color: var(--accent); padding-top: 0.2rem; line-height: 1; }
+
+.service-num {
+  font-family: var(--serif);
+  font-size: 0.85rem;
+  font-style: italic;
+  color: rgba(139,105,20,0.25);
+  padding-top: 0.25rem;
+  transition: color 0.3s;
+}
+
+.service-content {}
+
+.service-title {
+  font-family: var(--serif);
+  font-size: 1.6rem;
+  font-weight: 400;
+  color: var(--text);
+  margin-bottom: 0.75rem;
+  line-height: 1.2;
+}
+
+.service-desc {
+  font-size: 0.98rem;
+  color: var(--muted);
+  line-height: 1.85;
+  max-width: 50ch;
+}
+
+.service-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  padding-top: 0.3rem;
+}
+
+.service-tag {
+  font-size: 0.72rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--accent);
+  border: 1px solid var(--accent);
+  padding: 0.4rem 0.9rem;
+  font-weight: 500;
+  background: var(--accent-dim);
+}
+
+/* CERTIFICATIONS */
+.certifications {
+  background: var(--bg2);
+  border-top: 1px solid var(--border);
+}
+
+.certs-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1px;
+  background: var(--border);
+  border: 1px solid var(--border);
+}
+
+.cert-card {
+  background: var(--bg2);
+  padding: 2rem;
+  transition: background 0.3s;
+  position: relative;
+  overflow: hidden;
+  cursor: none;
+}
+
+.cert-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 0; height: 2px;
+  background: var(--accent);
+  transition: width 0.4s ease;
+}
+
+.cert-card:hover::before { width: 100%; }
+.cert-card:hover { background: var(--surface); }
+
+.cert-issuer-tag {
+  font-size: 0.62rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--accent);
+  opacity: 0.7;
+  margin-bottom: 0.75rem;
+}
+
+.cert-name {
+  font-family: var(--serif);
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--text);
+  line-height: 1.35;
+  margin-bottom: 0.5rem;
+}
+
+.cert-date { font-size: 0.72rem; color: var(--muted); }
+
+/* CONTACT */
+.contact {
+  background: var(--bg);
+  border-top: 1px solid var(--border);
+  text-align: center;
+  padding: 10rem 4rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.contact-glow {
+  position: absolute;
+  width: 800px; height: 800px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(139,105,20,0.05) 0%, transparent 65%);
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+}
+
+.contact h2 {
+  font-size: clamp(3rem, 7vw, 6rem);
+  max-width: 16ch;
+  margin: 0 auto 1.5rem;
+  position: relative;
+  z-index: 1;
+}
+
+.contact-sub {
+  font-size: 1rem;
+  color: var(--muted);
+  max-width: 40ch;
+  margin: 0 auto 3rem;
+  line-height: 1.8;
+  position: relative;
+  z-index: 1;
+}
+
+.contact-actions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  position: relative;
+  z-index: 1;
+}
+
+.contact-email-link {
+  font-family: var(--serif);
+  font-size: 1.1rem;
+  font-style: italic;
+  color: var(--accent);
+  text-decoration: none;
+  letter-spacing: 0.02em;
+  transition: opacity 0.2s;
+  cursor: none;
+}
+
+.contact-email-link:hover { opacity: 0.7; }
+
+/* FOOTER */
+footer {
+  padding: 1.75rem 4rem;
+  border-top: 1px solid var(--border);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--bg2);
+}
+
+.footer-logo {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 0.95rem;
+  color: var(--muted);
+}
+
+.footer-right {
+  font-size: 0.72rem;
+  color: var(--muted);
+  letter-spacing: 0.06em;
+}
+
+/* REVEAL */
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.9s ease, transform 0.9s ease;
+}
+
+.reveal.visible { opacity: 1; transform: translateY(0); }
+.reveal-delay-1 { transition-delay: 0.1s; }
+.reveal-delay-2 { transition-delay: 0.2s; }
+.reveal-delay-3 { transition-delay: 0.3s; }
+.reveal-delay-4 { transition-delay: 0.4s; }
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* MOBILE */
+@media (max-width: 900px) {
+  nav { padding: 1rem 1.5rem; }
+  nav.scrolled { padding: 0.85rem 1.5rem; }
+  .nav-links { display: none; }
+  .hero { padding: 0 1.5rem 4rem; }
+  .hero-scroll-hint { display: none; }
+  .hero-bottom { flex-direction: column; align-items: flex-start; gap: 2rem; }
+  .hero-actions { align-items: flex-start; }
+  section { padding: 5rem 1.5rem; }
+  .section-header { flex-direction: column; gap: 1.5rem; }
+  .about-grid { grid-template-columns: 1fr; gap: 3rem; }
+  .about-stats { grid-template-columns: 1fr 1fr; }
+  .service-item { grid-template-columns: 40px 1fr; }
+  .service-tags { display: none; }
+  .certs-grid { grid-template-columns: 1fr 1fr; }
+  footer { flex-direction: column; gap: 0.5rem; text-align: center; }
+  .contact { padding: 6rem 1.5rem; }
+  .contact-actions { flex-direction: column; }
+  body { cursor: auto; }
+  .cursor, .cursor-ring { display: none; }
+}
+</style>
 </head>
 <body>
-<p class="p1"><span class="s1">Somachi Ngoka</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p2"><span class="s1"></span><br></p>
-<h1 style="margin: 0.0px 0.0px 24.0px 0.0px; font: 72.0px 'Helvetica Neue'; color: #141310; -webkit-text-stroke: #141310"><span class="s1">Data that </span><span class="s2">drives</span><span class="s1"> decisions</span></h1>
-<p class="p4"><span class="s1">I help startups and growing businesses build the data infrastructure they need to succeed, ranging from dashboards, end to end pipelines and reporting systems.</span></p>
-<p class="p5"><span class="s3">START A CONVERSATION</span><span class="s4"> </span><span class="s5">EXPLORE SERVICES</span></p>
-<p class="p6"><span class="s6">Power BI</span></p>
-<p class="p7"><span class="s1"></span><br></p>
-<p class="p6"><span class="s6">Snowflake</span></p>
-<p class="p7"><span class="s1"></span><br></p>
-<p class="p6"><span class="s6">SQL</span></p>
-<p class="p7"><span class="s1"></span><br></p>
-<p class="p6"><span class="s6">Tableau</span></p>
-<p class="p7"><span class="s1"></span><br></p>
-<p class="p6"><span class="s6">Python</span></p>
-<p class="p7"><span class="s1"></span><br></p>
-<p class="p6"><span class="s6">Alteryx</span></p>
-<p class="p7"><span class="s1"></span><br></p>
-<p class="p6"><span class="s6">Azure</span></p>
-<p class="p7"><span class="s1"></span><br></p>
-<p class="p6"><span class="s6">Databricks</span></p>
-<p class="p7"><span class="s1"></span><br></p>
-<p class="p6"><span class="s6">Sigma</span></p>
-<p class="p7"><span class="s1"></span><br></p>
-<p class="p6"><span class="s6">Excel</span></p>
-<p class="p7"><span class="s1"></span><br></p>
-<p class="p6"><span class="s6">Azure DevOps</span></p>
-<p class="p7"><span class="s1"></span><br></p>
-<p class="p6"><span class="s6">Power BI</span></p>
-<p class="p7"><span class="s1"></span><br></p>
-<p class="p6"><span class="s6">Snowflake</span></p>
-<p class="p7"><span class="s1"></span><br></p>
-<p class="p6"><span class="s6">SQL</span></p>
-<p class="p7"><span class="s1"></span><br></p>
-<p class="p6"><span class="s6">Tableau</span></p>
-<p class="p7"><span class="s1"></span><br></p>
-<p class="p6"><span class="s6">Python</span></p>
-<p class="p7"><span class="s1"></span><br></p>
-<p class="p6"><span class="s6">Alteryx</span></p>
-<p class="p7"><span class="s1"></span><br></p>
-<p class="p6"><span class="s6">Azure</span></p>
-<p class="p7"><span class="s1"></span><br></p>
-<p class="p6"><span class="s6">Databricks</span></p>
-<p class="p7"><span class="s1"></span><br></p>
-<p class="p6"><span class="s6">Sigma</span></p>
-<p class="p7"><span class="s1"></span><br></p>
-<p class="p6"><span class="s6">Excel</span></p>
-<p class="p7"><span class="s1"></span><br></p>
-<p class="p6"><span class="s6">Azure DevOps</span></p>
-<p class="p7"><span class="s1"></span><br></p>
-<p class="p8"><span class="s6">01</span></p>
-<h2 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 36.0px 'Helvetica Neue'; color: #141310; -webkit-text-stroke: #141310"><span class="s6">Who I </span><span class="s7">am</span></h2>
-<p class="p10"><span class="s6">I'm a data consultant with years of hands-on experience building data solutions at institutions like </span><span class="s8">Northern Trust</span><span class="s6"> and </span><span class="s8">Sigma Computing</span><span class="s6">. I've built and shipped data products used by thousands of people globally.</span></p>
-<p class="p10"><span class="s6">Alongside my current role, I offer consultancy services to help growing businesses get more from their data, including dashboards, visualisations and full data pipeline architecture, without the overhead of a full-time hire.</span></p>
-<p class="p11"><span class="s6">I hold a BSc in Information Management for Business from </span><span class="s8">University College London</span><span class="s6"> and hold certifications across Microsoft Power BI, Azure, Alteryx, and Databricks.</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p8"><span class="s9">02</span></p>
-<h2 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 36.0px 'Helvetica Neue'; color: #141310; -webkit-text-stroke: #141310"><span class="s9">What I </span><span class="s10">build</span></h2>
-<p class="p12"><span class="s9">•</span></p>
-<p class="p13"><span class="s9">Dashboard Design &amp; BI Reporting</span></p>
-<p class="p14"><span class="s9">Bespoke Power BI and Tableau dashboards that surface the metrics that matter. Built to be understood at a glance, maintained with ease, and designed to drive faster decisions.</span></p>
-<p class="p12"><span class="s9">•</span></p>
-<p class="p13"><span class="s9">Data Pipeline &amp; Warehousing</span></p>
-<p class="p14"><span class="s9">End-to-end data infrastructure using Snowflake, SQL, and Python. Clean, structured pipelines that make your data reliable, scalable, and queryable across your whole business.</span></p>
-<p class="p12"><span class="s9">•</span></p>
-<p class="p13"><span class="s9">Data Strategy &amp; Audit</span></p>
-<p class="p14"><span class="s9">Not sure where to start? I will assess your current data setup, identify the gaps, and give you a clear, prioritised roadmap for what to build and in what order.</span></p>
-<p class="p8"><span class="s6">03</span></p>
-<h2 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 36.0px 'Helvetica Neue'; color: #775711; -webkit-text-stroke: #775711"><span class="s8">Verified </span><span class="s6">credentials</span></h2>
-<p class="p16"><span class="s6">MICROSOFT</span></p>
-<p class="p17"><span class="s6">Power BI Data Analyst Associate</span></p>
-<p class="p18"><span class="s6">PL-300 · Mar 2024</span></p>
-<p class="p16"><span class="s6">MICROSOFT</span></p>
-<p class="p17"><span class="s6">Azure Fundamentals</span></p>
-<p class="p18"><span class="s6">AZ-900 · Jan 2025</span></p>
-<p class="p16"><span class="s6">ALTERYX</span></p>
-<p class="p17"><span class="s6">Designer Core Certified</span></p>
-<p class="p18"><span class="s6">Mar 2025</span></p>
-<p class="p16"><span class="s6">ALTERYX</span></p>
-<p class="p17"><span class="s6">Machine Learning Fundamentals</span></p>
-<p class="p18"><span class="s6">Mar 2025</span></p>
-<p class="p16"><span class="s6">DATABRICKS</span></p>
-<p class="p17"><span class="s6">Databricks Fundamentals</span></p>
-<p class="p18"><span class="s6">Aug 2025</span></p>
-<p class="p16"><span class="s6">SNOWFLAKE</span></p>
-<p class="p17"><span class="s6">Data Engineering with Snowflake</span></p>
-<p class="p18"><span class="s6">Apr 2026</span></p>
-<p class="p19"><span class="s1"></span><br></p>
-<p class="p20"><span class="s9">04</span></p>
-<h2 style="margin: 0.0px 113.2px 18.0px 113.2px; text-align: center; text-indent: -113.2px; font: 56.0px 'Helvetica Neue'; color: #775711; -webkit-text-stroke: #775711"><span class="s11">Ready to build </span><span class="s9">something great?</span></h2>
-<p class="p22"><span class="s9">Whether you have a project in mind or are not sure where to start, I would love to have a conversation.</span></p>
-<p class="p23"><span class="s3">GET IN TOUCH</span></p>
-<p class="p24"><span class="s9"><a href="mailto:somachingokaconsultancy@gmail.com">somachingokaconsultancy@gmail.com<span class="s12"></span></a></span></p>
-<p class="p25"><span class="s6">Somachi Ngoka</span></p>
-<p class="p26"><span class="s6">London, UK  ·  Data Consultancy  ·  2026</span></p>
+
+<div class="cursor" id="cursor"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+
+<nav id="nav">
+  <a href="#" class="nav-logo">Somachi Ngoka</a>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#certifications">Credentials</a></li>
+    <li><a href="#" class="nav-cta open-modal" onclick="document.getElementById('contactModal').classList.add('active');document.getElementById('modalOverlay').classList.add('active');document.body.style.overflow='hidden';return false;">Let's talk</a></li>
+  </ul>
+</nav>
+
+<section class="hero" id="home">
+  <div class="hero-noise"></div>
+  <div class="hero-grid"></div>
+  <div class="hero-glow"></div>
+  <div class="hero-glow-2"></div>
+
+
+
+  <h1>Data that <span class="italic">drives</span> decisions</h1>
+
+  <div class="hero-bottom">
+    <p class="hero-desc">I help startups and growing businesses build the data infrastructure they need to succeed, ranging from dashboards, end to end pipelines and reporting systems.</p>
+    <div class="hero-actions">
+      <a href="#" class="btn-primary open-modal" onclick="document.getElementById('contactModal').classList.add('active');document.getElementById('modalOverlay').classList.add('active');document.body.style.overflow='hidden';return false;">Start a conversation</a>
+      <a href="#services" class="btn-secondary">Explore services</a>
+    </div>
+  </div>
+</section>
+
+<div class="marquee-section">
+  <div class="marquee-track">
+    <div class="marquee-item"><span class="marquee-text">Power BI</span><span class="marquee-dot"></span></div>
+    <div class="marquee-item"><span class="marquee-text">Snowflake</span><span class="marquee-dot"></span></div>
+    <div class="marquee-item"><span class="marquee-text">SQL</span><span class="marquee-dot"></span></div>
+    <div class="marquee-item"><span class="marquee-text">Tableau</span><span class="marquee-dot"></span></div>
+    <div class="marquee-item"><span class="marquee-text">Python</span><span class="marquee-dot"></span></div>
+    <div class="marquee-item"><span class="marquee-text">Alteryx</span><span class="marquee-dot"></span></div>
+    <div class="marquee-item"><span class="marquee-text">Azure</span><span class="marquee-dot"></span></div>
+    <div class="marquee-item"><span class="marquee-text">Databricks</span><span class="marquee-dot"></span></div>
+    <div class="marquee-item"><span class="marquee-text">Sigma</span><span class="marquee-dot"></span></div>
+    <div class="marquee-item"><span class="marquee-text">Excel</span><span class="marquee-dot"></span></div>
+    <div class="marquee-item"><span class="marquee-text">Azure DevOps</span><span class="marquee-dot"></span></div>
+    <div class="marquee-item"><span class="marquee-text">Power BI</span><span class="marquee-dot"></span></div>
+    <div class="marquee-item"><span class="marquee-text">Snowflake</span><span class="marquee-dot"></span></div>
+    <div class="marquee-item"><span class="marquee-text">SQL</span><span class="marquee-dot"></span></div>
+    <div class="marquee-item"><span class="marquee-text">Tableau</span><span class="marquee-dot"></span></div>
+    <div class="marquee-item"><span class="marquee-text">Python</span><span class="marquee-dot"></span></div>
+    <div class="marquee-item"><span class="marquee-text">Alteryx</span><span class="marquee-dot"></span></div>
+    <div class="marquee-item"><span class="marquee-text">Azure</span><span class="marquee-dot"></span></div>
+    <div class="marquee-item"><span class="marquee-text">Databricks</span><span class="marquee-dot"></span></div>
+    <div class="marquee-item"><span class="marquee-text">Sigma</span><span class="marquee-dot"></span></div>
+    <div class="marquee-item"><span class="marquee-text">Excel</span><span class="marquee-dot"></span></div>
+    <div class="marquee-item"><span class="marquee-text">Azure DevOps</span><span class="marquee-dot"></span></div>
+  </div>
+</div>
+
+<section class="about" id="about">
+  <div class="section-header reveal">
+    <div>
+      <div class="section-num">01</div>
+      <h2>Who I <em>am</em></h2>
+    </div>
+  </div>
+  <div class="about-grid">
+    <div class="about-text reveal reveal-delay-1">
+      <p>I'm a data consultant with years of hands-on experience building data solutions at institutions like <strong>Northern Trust</strong> and <strong>Sigma Computing</strong>. I've built and shipped data products used by thousands of people globally.</p>
+      <p>Alongside my current role, I offer consultancy services to help growing businesses get more from their data, including dashboards, visualisations and full data pipeline architecture, without the overhead of a full-time hire.</p>
+      <p>I hold a BSc in Information Management for Business from <strong>University College London</strong> and hold certifications across Microsoft Power BI, Azure, Alteryx, and Databricks.</p>
+    </div>
+    <div class="reveal reveal-delay-2">
+
+
+    </div>
+  </div>
+</section>
+
+<section class="services" id="services">
+  <div class="section-header reveal">
+    <div>
+      <div class="section-num">02</div>
+      <h2>What I <em>build</em></h2>
+    </div>
+
+  </div>
+  <div class="services-list">
+    <div class="service-item reveal">
+
+      <div class="service-bullet">&#8226;</div>
+      <div class="service-content">
+        <div class="service-title">Dashboard Design & BI Reporting</div>
+        <p class="service-desc">Bespoke Power BI and Tableau dashboards that surface the metrics that matter. Built to be understood at a glance, maintained with ease, and designed to drive faster decisions.</p>
+      </div>
+      <div class="service-tags">
+        <span class="service-tag">Excel</span>
+        <span class="service-tag">Power BI</span>
+        <span class="service-tag">Sigma</span>
+        <span class="service-tag">Tableau</span>
+      </div>
+    </div>
+    <div class="service-item reveal reveal-delay-1">
+
+      <div class="service-bullet">&#8226;</div>
+      <div class="service-content">
+        <div class="service-title">Data Pipeline & Warehousing</div>
+        <p class="service-desc">End-to-end data infrastructure using Snowflake, SQL, and Python. Clean, structured pipelines that make your data reliable, scalable, and queryable across your whole business.</p>
+      </div>
+      <div class="service-tags">
+        <span class="service-tag">Databricks</span>
+        <span class="service-tag">Python</span>
+        <span class="service-tag">Snowflake</span>
+        <span class="service-tag">SQL</span>
+      </div>
+    </div>
+    <div class="service-item reveal reveal-delay-2">
+
+      <div class="service-bullet">&#8226;</div>
+      <div class="service-content">
+        <div class="service-title">Data Strategy & Audit</div>
+        <p class="service-desc">Not sure where to start? I will assess your current data setup, identify the gaps, and give you a clear, prioritised roadmap for what to build and in what order.</p>
+      </div>
+      <div class="service-tags">
+        <span class="service-tag">Agile</span>
+        <span class="service-tag">Consulting</span>
+        <span class="service-tag">Roadmapping</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="certifications" id="certifications">
+
+    <div class="section-header reveal">
+    <div>
+      <div class="section-num">03</div>
+      <h2>Verified <em>credentials</em></h2>
+    </div>
+  </div>
+  <div class="certs-grid">
+    <div class="cert-card reveal">
+      <div class="cert-issuer-tag">Microsoft</div>
+      <div class="cert-name">Power BI Data Analyst Associate</div>
+      <div class="cert-date">PL-300 · Mar 2024</div>
+    </div>
+    <div class="cert-card reveal reveal-delay-1">
+      <div class="cert-issuer-tag">Microsoft</div>
+      <div class="cert-name">Azure Fundamentals</div>
+      <div class="cert-date">AZ-900 · Jan 2025</div>
+    </div>
+    <div class="cert-card reveal reveal-delay-2">
+      <div class="cert-issuer-tag">Alteryx</div>
+      <div class="cert-name">Designer Core Certified</div>
+      <div class="cert-date">Mar 2025</div>
+    </div>
+    <div class="cert-card reveal reveal-delay-1">
+      <div class="cert-issuer-tag">Alteryx</div>
+      <div class="cert-name">Machine Learning Fundamentals</div>
+      <div class="cert-date">Mar 2025</div>
+    </div>
+    <div class="cert-card reveal reveal-delay-2">
+      <div class="cert-issuer-tag">Databricks</div>
+      <div class="cert-name">Databricks Fundamentals</div>
+      <div class="cert-date">Aug 2025</div>
+    </div>
+    <div class="cert-card reveal reveal-delay-3">
+      <div class="cert-issuer-tag">Snowflake</div>
+      <div class="cert-name">Data Engineering with Snowflake</div>
+      <div class="cert-date">Apr 2026</div>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="contact-glow"></div>
+  <div class="reveal">
+    <div class="section-num" style="text-align:center; margin-bottom:1rem;">04</div>
+    <h2>Ready to build <em>something great?</em></h2>
+    <p class="contact-sub">Whether you have a project in mind or are not sure where to start, I would love to have a conversation.</p>
+    <div class="contact-actions">
+      <a href="#" class="btn-primary open-modal" onclick="document.getElementById('contactModal').classList.add('active');document.getElementById('modalOverlay').classList.add('active');document.body.style.overflow='hidden';return false;">Get in touch</a>
+      <a href="mailto:somachingokaconsultancy@gmail.com" class="contact-email-link">somachingokaconsultancy@gmail.com</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <span class="footer-logo">Somachi Ngoka</span>
+  <span class="footer-right">London, UK &nbsp;·&nbsp; Data Consultancy &nbsp;·&nbsp; 2026</span>
+</footer>
+
+
+
+<div id="modalOverlay"></div>
+
+<div id="contactModal" >
+  <button id="modalClose" style="position:absolute;top:1.25rem;right:1.5rem;background:none;border:none;font-size:1.4rem;color:rgba(26,24,20,0.4);cursor:pointer;line-height:1;font-family:sans-serif;">&times;</button>
+  <div style="margin-bottom:2rem;">
+    <p style="font-size:0.68rem;letter-spacing:0.2em;text-transform:uppercase;color:#8B6914;margin-bottom:0.5rem;font-family:'Outfit',sans-serif;">Get in touch</p>
+    <h3 style="font-family:'Playfair Display',Georgia,serif;font-size:1.8rem;font-weight:400;color:#1A1814;line-height:1.2;">Let's start a conversation</h3>
+  </div>
+  <form id="contactForm" style="display:flex;flex-direction:column;gap:1.1rem;">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;">
+      <div>
+        <label style="font-size:0.7rem;letter-spacing:0.12em;text-transform:uppercase;color:rgba(26,24,20,0.5);font-family:'Outfit',sans-serif;display:block;margin-bottom:0.4rem;">Name</label>
+        <input type="text" name="name" required placeholder="Your name" style="width:100%;padding:0.75rem 1rem;border:1px solid rgba(26,24,20,0.15);background:#fff;font-family:'Outfit',sans-serif;font-size:0.88rem;color:#1A1814;outline:none;transition:border-color 0.2s;" onfocus="this.style.borderColor='#8B6914'" onblur="this.style.borderColor='rgba(26,24,20,0.15)'">
+      </div>
+      <div>
+        <label style="font-size:0.7rem;letter-spacing:0.12em;text-transform:uppercase;color:rgba(26,24,20,0.5);font-family:'Outfit',sans-serif;display:block;margin-bottom:0.4rem;">Email</label>
+        <input type="email" name="email" required placeholder="your@email.com" style="width:100%;padding:0.75rem 1rem;border:1px solid rgba(26,24,20,0.15);background:#fff;font-family:'Outfit',sans-serif;font-size:0.88rem;color:#1A1814;outline:none;transition:border-color 0.2s;" onfocus="this.style.borderColor='#8B6914'" onblur="this.style.borderColor='rgba(26,24,20,0.15)'">
+      </div>
+    </div>
+    <div>
+      <label style="font-size:0.7rem;letter-spacing:0.12em;text-transform:uppercase;color:rgba(26,24,20,0.5);font-family:'Outfit',sans-serif;display:block;margin-bottom:0.4rem;">Company (optional)</label>
+      <input type="text" name="company" placeholder="Your company" style="width:100%;padding:0.75rem 1rem;border:1px solid rgba(26,24,20,0.15);background:#fff;font-family:'Outfit',sans-serif;font-size:0.88rem;color:#1A1814;outline:none;transition:border-color 0.2s;" onfocus="this.style.borderColor='#8B6914'" onblur="this.style.borderColor='rgba(26,24,20,0.15)'">
+    </div>
+    <div>
+      <label style="font-size:0.7rem;letter-spacing:0.12em;text-transform:uppercase;color:rgba(26,24,20,0.5);font-family:'Outfit',sans-serif;display:block;margin-bottom:0.4rem;">What do you need help with?</label>
+      <select name="service" required style="width:100%;padding:0.75rem 1rem;border:1px solid rgba(26,24,20,0.15);background:#fff;font-family:'Outfit',sans-serif;font-size:0.88rem;color:#1A1814;outline:none;appearance:none;cursor:pointer;">
+        <option value="" disabled selected>Select a service</option>
+        <option value="Dashboard Design & BI Reporting">Dashboard Design & BI Reporting</option>
+        <option value="Data Pipeline & Warehousing">Data Pipeline & Warehousing</option>
+        <option value="Data Strategy & Audit">Data Strategy & Audit</option>
+        <option value="Not sure yet">Not sure yet</option>
+      </select>
+    </div>
+    <div>
+      <label style="font-size:0.7rem;letter-spacing:0.12em;text-transform:uppercase;color:rgba(26,24,20,0.5);font-family:'Outfit',sans-serif;display:block;margin-bottom:0.4rem;">Message</label>
+      <textarea name="message" required placeholder="Tell me a bit about your project..." rows="4" style="width:100%;padding:0.75rem 1rem;border:1px solid rgba(26,24,20,0.15);background:#fff;font-family:'Outfit',sans-serif;font-size:0.88rem;color:#1A1814;outline:none;resize:vertical;transition:border-color 0.2s;" onfocus="this.style.borderColor='#8B6914'" onblur="this.style.borderColor='rgba(26,24,20,0.15)'"></textarea>
+    </div>
+    <button id="submitBtn" type="submit" style="padding:0.9rem 2rem;background:#1A1814;color:#F7F4EF;font-family:'Outfit',sans-serif;font-size:0.78rem;letter-spacing:0.12em;text-transform:uppercase;border:none;cursor:pointer;font-weight:500;transition:background 0.25s;margin-top:0.5rem;align-self:flex-start;" onmouseover="this.style.background='#8B6914'" onmouseout="this.style.background='#1A1814'">Send message</button>
+  </form>
+  <div id="formSuccess" style="display:none;flex-direction:column;align-items:center;text-align:center;padding:2rem 0;gap:1rem;">
+    <div style="width:52px;height:52px;border-radius:50%;background:rgba(139,105,20,0.1);display:flex;align-items:center;justify-content:center;font-size:1.4rem;color:#8B6914;">&#10003;</div>
+    <h3 style="font-family:'Playfair Display',Georgia,serif;font-size:1.5rem;font-weight:400;color:#1A1814;">Message sent!</h3>
+    <p style="font-size:0.9rem;color:rgba(26,24,20,0.5);font-family:'Outfit',sans-serif;max-width:30ch;line-height:1.7;">Thank you for reaching out. I will be in touch with you shortly.</p>
+    <button onclick="closeModal()" style="margin-top:0.5rem;padding:0.7rem 1.75rem;background:#1A1814;color:#F7F4EF;font-family:'Outfit',sans-serif;font-size:0.75rem;letter-spacing:0.1em;text-transform:uppercase;border:none;cursor:pointer;">Close</button>
+  </div>
+</div>
+
+
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+
+  // Nav scroll
+  const nav = document.getElementById('nav');
+  window.addEventListener('scroll', function() {
+    nav.classList.toggle('scrolled', window.scrollY > 60);
+  });
+
+  // Scroll reveal
+  const reveals = document.querySelectorAll('.reveal');
+  const revealObserver = new IntersectionObserver(function(entries) {
+    entries.forEach(function(e) {
+      if (e.isIntersecting) {
+        e.target.classList.add('visible');
+        revealObserver.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.08 });
+  reveals.forEach(function(el) { revealObserver.observe(el); });
+
+  // Custom cursor
+  const cursorDot = document.getElementById('cursor');
+  const cursorRing = document.getElementById('cursorRing');
+  if (cursorDot && cursorRing) {
+    let ringX = 0, ringY = 0, mouseX = 0, mouseY = 0;
+    document.addEventListener('mousemove', function(e) {
+      mouseX = e.clientX;
+      mouseY = e.clientY;
+      cursorDot.style.left = (mouseX - 4) + 'px';
+      cursorDot.style.top = (mouseY - 4) + 'px';
+    });
+    function animateRing() {
+      ringX += (mouseX - ringX - 18) * 0.12;
+      ringY += (mouseY - ringY - 18) * 0.12;
+      cursorRing.style.left = ringX + 'px';
+      cursorRing.style.top = ringY + 'px';
+      requestAnimationFrame(animateRing);
+    }
+    animateRing();
+    document.querySelectorAll('a, button, .tool-tag, .cert-card, .service-item').forEach(function(el) {
+      el.addEventListener('mouseenter', function() {
+        cursorDot.style.transform = 'scale(2)';
+        cursorRing.style.transform = 'scale(1.5)';
+        cursorRing.style.borderColor = 'rgba(139,105,20,0.6)';
+      });
+      el.addEventListener('mouseleave', function() {
+        cursorDot.style.transform = 'scale(1)';
+        cursorRing.style.transform = 'scale(1)';
+        cursorRing.style.borderColor = 'rgba(139,105,20,0.3)';
+      });
+    });
+  }
+
+  // Modal
+  const modal = document.getElementById('contactModal');
+  const overlay = document.getElementById('modalOverlay');
+  const closeBtn = document.getElementById('modalClose');
+  const contactForm = document.getElementById('contactForm');
+  const formSuccess = document.getElementById('formSuccess');
+
+  function openModal() {
+    if (!modal || !overlay) return;
+    modal.classList.add('active');
+    overlay.classList.add('active');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeModal() {
+    if (!modal || !overlay) return;
+    modal.classList.remove('active');
+    overlay.classList.remove('active');
+    document.body.style.overflow = '';
+    if (formSuccess) formSuccess.style.display = 'none';
+    if (contactForm) contactForm.style.display = 'flex';
+  }
+
+  window.closeModal = closeModal;
+
+  document.querySelectorAll('.open-modal').forEach(function(btn) {
+    btn.addEventListener('click', function(e) {
+      e.preventDefault();
+      openModal();
+    });
+  });
+
+  if (overlay) overlay.addEventListener('click', closeModal);
+  if (closeBtn) closeBtn.addEventListener('click', closeModal);
+
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') closeModal();
+  });
+
+  if (contactForm) {
+    contactForm.addEventListener('submit', async function(e) {
+      e.preventDefault();
+      const submitBtn = document.getElementById('submitBtn');
+      submitBtn.textContent = 'Sending...';
+      submitBtn.disabled = true;
+      try {
+        const res = await fetch('https://formspree.io/f/xaqzedqv', {
+          method: 'POST',
+          headers: { 'Accept': 'application/json' },
+          body: new FormData(contactForm)
+        });
+        if (res.ok) {
+          contactForm.style.display = 'none';
+          formSuccess.style.display = 'flex';
+        } else {
+          submitBtn.textContent = 'Something went wrong. Try again.';
+          submitBtn.disabled = false;
+        }
+      } catch(err) {
+        submitBtn.textContent = 'Something went wrong. Try again.';
+        submitBtn.disabled = false;
+      }
+    });
+  }
+
+});
+</script>
 </body>
 </html>
