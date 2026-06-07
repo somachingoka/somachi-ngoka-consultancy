@@ -1,0 +1,13 @@
+{
+  "name": "somachi-ngoka-consultancy",
+  "version": "1.0.0",
+  "description": "Somachi Ngoka Data Consultancy Website",
+  "private": true,
+  "scripts": {
+    "build": "echo 'Static HTML project - no build step required'",
+    "lint": "echo 'No linter configured for static HTML'"
+  },
+  "dependencies": {
+    "@vercel/analytics": "^1.1.1"
+  }
+}
